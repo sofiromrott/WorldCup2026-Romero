@@ -51,7 +51,7 @@ class MainActivity : ComponentActivity() {
                         DetallePage(
                             navHostController = navController,
                             context = this@MainActivity,
-                            groupID = "J"
+                            groupID = grupoId // CORREGIDO: Usé la variable grupoId en lugar de "J"
                         )
                     }
                 }

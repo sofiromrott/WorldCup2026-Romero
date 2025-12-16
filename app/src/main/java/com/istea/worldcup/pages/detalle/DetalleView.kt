@@ -69,7 +69,8 @@ fun DetalleView (
                 navigationIcon = {
                     IconButton(
                         onClick = {
-
+                            // PUNTO 6: corregí la acción de volver atrás
+                            onAction(DetalleIntencion.IrParaAtras)
                         }
                     ) {
                         Icon(
@@ -109,7 +110,8 @@ fun Cargando() {
         CircularProgressIndicator(
             modifier = Modifier.size(160.dp),
             strokeWidth = 20.dp,
-            color = Color.Green
+            // PUNTO 4: Color correcto usando el tema
+            color = MaterialTheme.colorScheme.primaryContainer
         )
     }
 }
@@ -118,7 +120,8 @@ fun Cargando() {
 fun Contenido(grupo: Group){
     Column {
         Text(
-            text = "Grupo ${grupo.name}" ,
+            //PUNTO 5: Eliminé la duplicación de "Grupo"
+            text = grupo.name,
             style = MaterialTheme.typography.headlineMedium,
             modifier = Modifier.padding(16.dp)
         )
